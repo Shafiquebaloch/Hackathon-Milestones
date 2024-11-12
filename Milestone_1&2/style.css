@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /
+}
+
+body {
+    background-color: rgb(122, 115, 115);
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 820px;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
+
+.left {
+    background-color: darkcyan;
+    color: #ffffff;
+    padding: 20px;
+    width: 100%; /
+    box-sizing: border-box;
+    
+}
+
+
+.img {
+    width: 220px;
+    height: 220px;
+    border: #e42626 solid 5px;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+
+.FName, .LName, .title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+}
+
+.FName {
+    color: #ffffff;
+}
+
+.LName {
+    color: rgb(243, 240, 241);
+}
+
+.title {
+    color: white;
+    padding-bottom: 40px;
+}
+
+/* Buttons */
+#Button, #InterestButton {
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid rgb(206, 29, 29);
+    background-color: rgb(206, 29, 29);
+}
+
+/* Left section headings */
+.left-headings {
+    background-color: rgb(206, 29, 29);
+    width: 160px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* Contact & email styling */
+.contact, .email {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.skills {
+    padding-top: 10px;
+    list-style: square;
+    margin-left: 20px;
+    font-size: large;
+}
+
+/* Right section */
+.right {
+    background-color: #BDD9BF;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+/* Heading styling */
+.heading {
+    background-color: white;
+    height: 60px;
+    color: rgb(244, 242, 242);
+    text-align: center;
+    padding: 15px 45px;
+    display: flex;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 40px;
+    color: rgb(5, 134, 176);
+}
+
+
+.right-headings {
+    background-color: #ee0b0b;
+    width: 170px;
+    border-radius: 35px;
+    color: #ffffff;
+    text-align: center;  
+    justify-content: center;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto; 
+}
+
+
+.description {
+    padding: 30px;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+/* Container for languages */
+.container-lang {
+    padding: 20px;
+}
+
+/* Language item */
+.lang {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.lang span {
+    width: 70px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Progress bar styling */
+.progress {
+    flex: 1;
+    height: 8px;
+    background-color: black;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.progressBar {
+    height: 100%;
+    background-color: darkcyan;
+}
+
+.percentage {
+    font-size: 8px;
+}
+
+/* Social media icons */
+.fa-solid, .fa-regular, .fa-brands {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 19px;
+    color: rgb(10, 14, 215);
+    margin: 10px;
+}
+
+.linkdin {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+/* Large screens (Desktop) */
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left {
+        width: 33%; /* Left section width */
+    }
+
+    .right {
+        width: 67%; /* Right section width */
+    }
+}
+
+/* Medium screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left, .right {
+        width: 50%; /* Each section takes 48% of the width */
+    }
+
+    .img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .FName, .LName, .title {
+        font-size: 20px;
+    }
+
+    .heading {
+        width: 90%;
+    }
+}
+
+/* Small screens (Mobile phones) */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .left, .right {
+        width: 100%; /* Full width for both sections */
+    }
+
+    .img {
+        width: 180px;
+        height: 180px;
+        margin-left: 10px;
+    }
+
+    .FName, .LName, .title {
+        font-size: 18px;
+    }
+
+    .heading {
+        width: 100%;
+        margin-left: 0;
+
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .skills {
+        font-size: 16px;
+    }
+
+    .progress {
+        height: 6px;
+    }
+
+    .fa-solid, .fa-regular, .fa-brands {
+        font-size: 18px;
+    }
+}
